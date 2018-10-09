@@ -10,8 +10,12 @@ app.controller("contentController",function($scope,contentService){
 		);
 	}
 	
+<<<<<<< HEAD
 	//搜索跳转
 	$scope.search=function(){
 		location.href="http://localhost:9104/search.html#?keywords="+$scope.keywords;
 	}
+=======
+	
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 });

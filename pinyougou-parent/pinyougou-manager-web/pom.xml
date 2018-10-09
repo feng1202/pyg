@@ -104,11 +104,14 @@
 			<artifactId>pinyougou-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>com.pinyougou</groupId>
 			<artifactId>pinyougou-search-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 	</dependencies>
 
 

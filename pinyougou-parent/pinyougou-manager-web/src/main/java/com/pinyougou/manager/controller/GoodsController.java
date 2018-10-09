@@ -1,5 +1,8 @@
 package com.pinyougou.manager.controller;
+<<<<<<< HEAD
 import java.util.Arrays;
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 import java.util.List;
 
 import org.springframework.web.bind.annotation.RequestBody;
@@ -7,9 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.pinyougou.pojo.TbGoods;
+<<<<<<< HEAD
 import com.pinyougou.pojo.TbItem;
 import com.pinyougou.pojogroup.Goods;
 import com.pinyougou.search.service.ItemSearchService;
+=======
+import com.pinyougou.pojogroup.Goods;
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 import com.pinyougou.sellergoods.service.GoodsService;
 
 import entity.PageResult;
@@ -82,10 +89,13 @@ public class GoodsController {
 	public Result delete(Long [] ids){
 		try {
 			goodsService.delete(ids);
+<<<<<<< HEAD
 			
 			//从索引库中删除
 			itemSearchService.deleteByGoodsIds(Arrays.asList(ids));
 			
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 			return new Result(true, "删除成功"); 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -105,9 +115,12 @@ public class GoodsController {
 		return goodsService.findPage(goods, page, rows);		
 	}
 	
+<<<<<<< HEAD
 	
 	@Reference(timeout=100000)
 	private ItemSearchService itemSearchService;
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 	/**
 	 * 更新状态
 	 * @param ids
@@ -117,6 +130,7 @@ public class GoodsController {
 	public Result updateStatus(Long[] ids, String status){		
 		try {
 			goodsService.updateStatus(ids, status);
+<<<<<<< HEAD
 			
 			//按照SPU ID查询 SKU列表(状态为1)		
 			if("1".equals(status)){//如果是审核通过
@@ -130,6 +144,8 @@ public class GoodsController {
 				}
 			}
 			
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 			return new Result(true, "成功");
 		} catch (Exception e) {
 			e.printStackTrace();

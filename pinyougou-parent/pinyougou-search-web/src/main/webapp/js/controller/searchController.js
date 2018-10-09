@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 app.controller("searchController",function($scope,$location,searchService){
 	
 	//定义搜索对象的结构 category:商品分类
@@ -10,10 +11,23 @@ app.controller("searchController",function($scope,$location,searchService){
 				function(response){
 					$scope.resultMap=response;//搜索返回的结果
 					buildPageLabel();//调用
+=======
+app.controller("searchController",function($scope,searchService){
+	
+	//定义搜索对象的结构 category:商品分类
+	$scope.searchMap={'keywords':'','category':'','brand':'','spec':{}};//搜索对象
+	
+	//搜索
+	$scope.search=function(){
+		searchService.search($scope.searchMap).success(
+				function(response){
+					$scope.resultMap=response;//搜索返回的结果
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 				}
 		);
 	}
 	
+<<<<<<< HEAD
 	//构建分页标签(totalPages为总页数)
 	buildPageLabel=function(){
 		$scope.pageLabel=[];//新增分页栏属性		
@@ -53,6 +67,12 @@ app.controller("searchController",function($scope,$location,searchService){
 	//添加复合搜索条件  改变searchMap
 	$scope.addSearchItem=function(key,value){
 		if(key=='category' || key=='brand' || key=='price'){//如果点击的是分类或者是品牌
+=======
+	
+	//添加复合搜索条件  改变searchMap
+	$scope.addSearchItem=function(key,value){
+		if(key=='category' || key=='brand'){//如果点击的是分类或者是品牌
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 			$scope.searchMap[key]=value;
 		}else{//否则是规格
 			$scope.searchMap.spec[key]=value;
@@ -62,13 +82,18 @@ app.controller("searchController",function($scope,$location,searchService){
 	
 	//移除复合搜索条件
 	$scope.removeSearchItem=function(key){
+<<<<<<< HEAD
 		if(key=="category" ||  key=="brand" || key=='price'){//如果是分类或品牌
+=======
+		if(key=="category" ||  key=="brand"){//如果是分类或品牌
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 			$scope.searchMap[key]="";		
 		}else{//否则是规格
 			delete $scope.searchMap.spec[key];//移除此属性
 		}
 		$scope.search();//执行搜索 
 	}
+<<<<<<< HEAD
 	
 	//根据页码查询(分页查询)
 	$scope.queryByPage=function(pageNo){
@@ -122,4 +147,6 @@ app.controller("searchController",function($scope,$location,searchService){
 		$scope.searchMap.keywords=  $location.search()['keywords'];
 		$scope.search();
 	}
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 });

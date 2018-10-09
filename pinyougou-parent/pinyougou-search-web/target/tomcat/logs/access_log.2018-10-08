@@ -46,6 +46,7 @@
 0:0:0:0:0:0:0:1 - - [08/Oct/2018:09:59:37 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 1025 http-bio-9104-exec-2 114
 0:0:0:0:0:0:0:1 - - [08/Oct/2018:09:59:40 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 7077 http-bio-9104-exec-10 107
 0:0:0:0:0:0:0:1 - - [08/Oct/2018:09:59:41 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 2232 http-bio-9104-exec-10 139
+<<<<<<< HEAD
 0:0:0:0:0:0:0:1 - - [08/Oct/2018:15:44:30 +0800] "GET / HTTP/1.1" 200 23951 http-bio-9104-exec-1 291
 0:0:0:0:0:0:0:1 - - [08/Oct/2018:15:44:36 +0800] "GET /js/controller/searchController.js HTTP/1.1" 200 1064 http-bio-9104-exec-7 6
 0:0:0:0:0:0:0:1 - - [08/Oct/2018:15:44:36 +0800] "GET /%7B%7Bitem.image%7D%7D HTTP/1.1" 404 995 http-bio-9104-exec-8 8
@@ -103,3 +104,5 @@
 0:0:0:0:0:0:0:1 - - [08/Oct/2018:18:19:40 +0800] "GET /img/Logo.png HTTP/1.1" 200 3752 http-bio-9104-exec-3 43
 0:0:0:0:0:0:0:1 - - [08/Oct/2018:18:19:40 +0800] "GET /fonts//icon-tb.woff?59lb71 HTTP/1.1" 200 33412 http-bio-9104-exec-4 58
 0:0:0:0:0:0:0:1 - - [08/Oct/2018:18:19:55 +0800] "POST /itemsearch/search.do HTTP/1.1" 200 25348 http-bio-9104-exec-4 7416
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24

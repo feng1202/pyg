@@ -1,6 +1,9 @@
 package com.pinyougou.sellergoods.service.impl;
 
+<<<<<<< HEAD
 import java.util.Arrays;
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -254,6 +257,7 @@ public class GoodsServiceImpl implements GoodsService {
 		}
 		
 	}
+<<<<<<< HEAD
 
 	/**
 	 * 根据SPU的ID集合查询SKU列表
@@ -273,4 +277,6 @@ public class GoodsServiceImpl implements GoodsService {
 	
 	
 	
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 }

@@ -7,7 +7,10 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+<<<<<<< HEAD
 import org.springframework.data.domain.Sort;
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.solr.core.SolrTemplate;
 import org.springframework.data.solr.core.query.Criteria;
@@ -42,10 +45,13 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 	public Map search(Map searchMap) {
 		Map map=new HashMap();
 		
+<<<<<<< HEAD
 		//关键字空格处理 
 		String keywords = (String)searchMap.get("keywords");
 		searchMap.put("keywords", keywords.replace(" ", ""));
 		
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 		//1.查询列表
 		map.putAll(searchList(searchMap));
 		//2.分组查询 商品分类列表
@@ -95,7 +101,10 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 			filterQuery.addCriteria(filterCriteria);
 			query.addFilterQuery(filterQuery);			
 		}
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 		//1.4 按规格过滤
 		if(searchMap.get("spec")!=null){			
 			Map<String,String> specMap= (Map<String, String>) searchMap.get("spec");
@@ -106,6 +115,7 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 				filterQuery.addCriteria(filterCriteria);
 				query.addFilterQuery(filterQuery);					
 				
+<<<<<<< HEAD
 			}
 		}
 			
@@ -152,12 +162,19 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 				Sort sort=new Sort(Sort.Direction.DESC, "item_"+sortField);
 				query.addSort(sort);
 			}
+=======
+			}		
+			
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 		}
 		
 		
 		
+<<<<<<< HEAD
 		
 		
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 		//***********  获取高亮结果集  ***********
 		//高亮页对象
 		HighlightPage<TbItem> page = solrTemplate.queryForHighlightPage(query, TbItem.class);
@@ -174,6 +191,7 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 			if(highlightList.size()>0 &&  highlightList.get(0).getSnipplets().size()>0 ){
 				TbItem item = entry.getEntity();
 				item.setTitle(highlightList.get(0).getSnipplets().get(0));			
+<<<<<<< HEAD
 			}
 		}
 		map.put("rows", page.getContent());
@@ -181,6 +199,11 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 		map.put("totalPages", page.getTotalPages());//返回总页数
 		map.put("total", page.getTotalElements());//返回总记录数
 		
+=======
+			}			
+		}
+		map.put("rows", page.getContent());
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 		return map;
 		
 	}
@@ -241,6 +264,7 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 		
 		return map;
 	}
+<<<<<<< HEAD
 
 
 	@Override
@@ -261,6 +285,8 @@ public class ItemSearchServiceImpl implements ItemSearchService {
 		solrTemplate.commit();
 		
 	}
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
 	
 	
 }

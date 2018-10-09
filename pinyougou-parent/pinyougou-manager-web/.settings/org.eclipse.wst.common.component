@@ -16,9 +16,12 @@
         <dependent-module archiveName="pinyougou-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/pinyougou-common/pinyougou-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+<<<<<<< HEAD
         <dependent-module archiveName="pinyougou-search-interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/pinyougou-search-interface/pinyougou-search-interface">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
         <property name="context-root" value="pinyougou-manager-web"/>
         <property name="java-output-path" value="/pinyougou-manager-web/target/classes"/>
     </wb-module>
