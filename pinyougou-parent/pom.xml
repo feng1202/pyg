@@ -291,8 +291,11 @@
     <module>pinyougou-search-interface</module>
     <module>pinyougou-search-service</module>
     <module>pinyougou-search-web</module>
+<<<<<<< HEAD
     <module>pinyougou-page-interface</module>
     <module>pinyougou-page-service</module>
     <module>pinyougou-page-web</module>
+=======
+>>>>>>> b22a8e16a57039082bbd2fe8883a488574d5cea0
 	</modules>
 </project>

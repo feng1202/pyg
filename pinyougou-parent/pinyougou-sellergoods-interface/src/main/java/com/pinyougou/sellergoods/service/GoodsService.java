@@ -1,7 +1,14 @@
 package com.pinyougou.sellergoods.service;
 import java.util.List;
 import com.pinyougou.pojo.TbGoods;
+<<<<<<< HEAD
 import com.pinyougou.pojo.TbItem;
+=======
+<<<<<<< HEAD
+import com.pinyougou.pojo.TbItem;
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
+>>>>>>> b22a8e16a57039082bbd2fe8883a488574d5cea0
 import com.pinyougou.pojogroup.Goods;
 
 import entity.PageResult;
@@ -66,6 +73,10 @@ public interface GoodsService {
 	 * @param status
 	 */
 	public void updateStatus(Long []ids,String status);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b22a8e16a57039082bbd2fe8883a488574d5cea0
 	
 	/**
 	 * 根据商品ID和状态查询Item表信息  
@@ -74,4 +85,9 @@ public interface GoodsService {
 	 * @return
 	 */
 	public List<TbItem> findItemListByGoodsIdandStatus(Long[] goodsIds, String status );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
+>>>>>>> b22a8e16a57039082bbd2fe8883a488574d5cea0
 }

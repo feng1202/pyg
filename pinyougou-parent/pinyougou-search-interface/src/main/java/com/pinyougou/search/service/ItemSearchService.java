@@ -1,6 +1,13 @@
 package com.pinyougou.search.service;
 
+<<<<<<< HEAD
 import java.util.List;
+=======
+<<<<<<< HEAD
+import java.util.List;
+=======
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
+>>>>>>> b22a8e16a57039082bbd2fe8883a488574d5cea0
 import java.util.Map;
 
 /**
@@ -13,6 +20,10 @@ public interface ItemSearchService {
 	
 	public Map search(Map searchMap);
 		
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b22a8e16a57039082bbd2fe8883a488574d5cea0
 	/**
 	 * 导入数据
 	 * @param list
@@ -24,5 +35,11 @@ public interface ItemSearchService {
 	 * @param ids
 	 */
 	public void deleteByGoodsIds(List goodsIdList);
+<<<<<<< HEAD
+=======
+=======
+	
+>>>>>>> 8d4c79b6237d07e2cbada9d1da1f49ab4df4da24
+>>>>>>> b22a8e16a57039082bbd2fe8883a488574d5cea0
 
 }
