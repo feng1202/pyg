@@ -7,6 +7,31 @@
   </parent>
   <artifactId>pinyougou-dao</artifactId>
   
+  <!--默认开发环境  -->
+  <properties>
+  	<env>dev</env>
+  </properties>
+  
+  <!--开发环境  -->
+  <profiles>
+  	<profile>
+  		<id>dev</id>
+  		<properties>
+  			<env>dev</env>
+  		</properties>
+  	</profile> 
+  	   
+  	<!--生产环境  -->   
+  	<profile>
+  		<id>pro</id>
+  		<properties>
+  			<env>pro</env>
+  		</properties>
+  	</profile>
+  </profiles>
+  
+  
+  
   <dependencies>
 
   	<dependency>
@@ -44,4 +69,17 @@
 	</dependency>
   </dependencies>
   
+<build>
+	<!-- 过滤资源 地址  -->
+    <filters>
+  		<filter>src/main/resources/filters/db_${env}.properties</filter>
+  	</filters>
+	<!--配置资源目录 过滤  -->
+  	<resources>
+  		<resource>
+  			<directory>src/main/resources</directory>
+  			<filtering>true</filtering>
+  		</resource>  		
+  	</resources>
+ </build> 	
 </project>
